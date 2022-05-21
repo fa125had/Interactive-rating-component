@@ -1,0 +1,153 @@
+/* Font-Family: [Overpass](https://fonts.google.com/specimen/Overpass)- Weights: 400, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Color-Variables */
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --color-footer: hsl(228, 45%, 44%);
+}
+
+* {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: #000;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+/* Style showbox of Submitted rank to user after submit feedback */
+#submittedNumber {
+    display: none;
+    font-size: 1.3rem;
+    color: var(--orange);
+    background-color: var(--darkBlue);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.container {
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+}
+/* VoteBox styling */
+.voteBox {
+    /* box-shadow: 1px 0 5rem var(--orange); */
+    width: 320px;
+    height: 350px;
+    background-color: var(--veryDarkBlue);
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+}
+
+.boxIcon img {
+    align-self: flex-start;
+    margin: 0.5rem;
+    background-color: var(--darkBlue);
+    padding: 1rem;
+    border-radius: 50%;
+}
+#thankYouIcon {
+    background-color: var(--veryDarkBlue);
+}
+.voteTagline h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 0.4rem;
+}
+
+.voteTagline p {
+    color: var(--lightGrey);
+    font-size: 1rem;
+    text-align: left;
+    margin: 1rem 0 1rem 0.4rem;
+}
+
+.radio-vote {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* style radio buttons for vote numbers */
+.radio-vote input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio-vote label {
+    display: inline-block;
+    background-color: var(--darkBlue);
+    color: var(--lightGrey);
+    padding: 1rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 10rem;
+    transition-duration: 350ms;
+}
+
+.radio-vote label:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.radio-vote input[type="radio"]:focus+label {
+    border: 0.5px dashed var(--veryDarkBlue);
+}
+
+.radio-vote input[type="radio"]:checked+label {
+    background-color: var(--orange);
+    color: var(--white);
+
+}
+/* Style Submit Button */
+.submitButton {
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    margin-top: 3rem;
+    padding: 0.6rem 8rem;
+    border-radius: 2rem;
+    border: none;
+    transition-duration: 250ms;
+}
+
+.submitButton:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    padding: 0.6rem 8.5rem;
+    cursor: pointer;
+}
+.submitButton:active {
+    padding: 0.6rem 7.5rem;
+
+}
+/* Style Footer */
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--lightGrey);
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a {
+    color: var(--color-footer);
+}

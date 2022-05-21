@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <main>
+    <div class="container" role="presentation">
+      <div class="voteBox">
+        <div class="boxIcon">
+          <img src="./images/icon-star.svg" alt="Vote Box Icon"  id="boxIcon"/>
+          <!-- Thank you state start -->
+          <img src="./images/illustration-thank-you.svg" alt="Thank you Icon" id="thankYouIcon" />
+          <!-- You selected Add rating here out of 5 -->
+          <h2 id="submittedNumber"></h2>
+        <div class="voteTagline" id="votTags">
+          <h2>How did we do?</h2>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <!-- Thank you state end -->
+        </div>
+          <!-- Rating state start -->
+        <form action="#" method="post" class="radio-vote" id="votingForm">
+          <input type="radio" id="1" name="radioVote" class="voteNumber" value="1" />
+          <label for="1">1</label>
+
+          <input type="radio" id="2" name="radioVote" value="2" />
+          <label for="2">2</label>
+
+          <input type="radio" id="3" name="radioVote" value="3" />
+          <label for="3">3</label>
+
+          <input type="radio" id="4" name="radioVote" value="4" checked />
+          <label for="4">4</label>
+
+          <input type="radio" id="5" name="radioVote" value="5" />
+          <label for="5">5</label>
+          <!-- Submit -->
+          <input type="submit" value="SUBMIT" class="submitButton" id="submit-vote-button" />
+        </form>
+        <!-- Rating state end -->
+      </div>
+      <!-- Footer -->
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+          href="https://www.codecademy.com/profiles/fa125had">fa125had</a>.
+      </div>
+    </div>
+  </main>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
